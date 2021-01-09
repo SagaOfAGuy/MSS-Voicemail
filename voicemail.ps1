@@ -43,8 +43,8 @@ function Login() {
 
 
     # Type in mailbox and code
-    $mailbox_code="81098"; # Put mailbox code in this variable or in separate file
-    $sec_code="222355";     # Put password in this variable or in separate file 
+    $mailbox_code=""; # Put mailbox code in this variable or in separate file
+    $sec_code="";     # Put password in this variable or in separate file 
 
     type_string $username $mailbox_code; 
     type_string $password $sec_code; 
