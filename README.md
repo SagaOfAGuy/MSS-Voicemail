@@ -1,6 +1,10 @@
 # AutoVoicemail
 Autovoicemail is a Powershell script that automates VCU MSS voicemail closing duties.  
 
+## Dependencies
+- This script requires the use of PSSlack to send images to Slack using powershell. 
+- Navigate to this project's folder and clone the PSSlack repository using this command: ```git clone https://github.com/RamblingCookieMonster/PSSlack.git```
+
 ### Requirements
 - Make sure Powershell execution policy allows for the execution of Powershell scripts on system. 
 - Make sure that Chrome browser is installed on system as the script uses Chrome for browser automation. 
