@@ -45,7 +45,18 @@ $channel_name="YourChannelName"
 $bot__user_token="xoxb-my-token"
 
 # Save changes to SendSlack.ps1
+```
 
+### Credentials
+```powershell 
+# Find and edit voicemail.ps1
+notepad voicemail.ps1
+
+# Change the variables below per your mailbox and security code
+$mailbox_code="YourMailboxCodeGoesHere"; # Put mailbox code in this variable or in separate file
+$sec_code="YourSecurityCodeGoesHere";
+
+# Save changes to voicemail.ps1
 ```
 
 ### Usage
