@@ -18,7 +18,7 @@ $ChromeOptions.AddArgument('start-maximized')
 $ChromeOptions.AcceptInsecureCertificates = $True
 $ChromeDriver = New-Object OpenQA.Selenium.Chrome.ChromeDriver($ChromeOptions)
 $webDriverWait = New-Object OpenQA.Selenium.Support.UI.WebDriverWait($ChromeDriver, 30); 
-
+$url=""; 
 
 # Function for typing in strings to form elements
 function type_string($form_element, $string) {
@@ -34,7 +34,7 @@ function Login() {
     # Start Chrome, and get form elements
 
     # Define this URL 
-    $ChromeDriver.Url = '';
+    $ChromeDriver.Url = $url;
     $ChromeDriver.SwitchTo().Frame("wpm"); # This gets the frame of page; need to switch to get access to HTML elements
     
     $username = $webDriverWait.Until([OpenQA.Selenium.Support.UI.ExpectedConditions]::ElementIsVisible( [OpenQA.Selenium.by]::Id("mailbox"))); 
@@ -97,7 +97,7 @@ function Screenshot() {
 function Logout() { 
     # Logout of voicemail. Define the window.location below 
     $logout = @"
-    window.location=""; 
+    window.location=$url+"/main.php?&module=home&page=messages&main_page_logout=""; 
 "@
     $ChromeDriver.ExecuteScript($logout); 
     write-host "Logged out!"; 
