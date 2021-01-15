@@ -52,9 +52,13 @@ $bot__user_token="xoxb-my-token"
 # Find and edit voicemail.ps1
 notepad voicemail.ps1
 
-# Change the variables below per your mailbox and security code
+# Change the variables below per your mailbox and security code (Lines 46 & 47)
 $mailbox_code="YourMailboxCodeGoesHere"; # Put mailbox code in this variable or in separate file
 $sec_code="YourSecurityCodeGoesHere";
+
+# Find and change the variable below to provide script with web voicemail URL (Line 21) 
+$url='YourWebVoicemailURL'
+
 
 # Save changes to voicemail.ps1
 ```
